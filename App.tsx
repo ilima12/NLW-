@@ -1,6 +1,6 @@
 import { StatusBar } from 'react-native';
 import {
-  userFonts,
+  useFonts,
   Inter_400Regular,
   Inter_600SemiBold,
   Inter_700Bold,
@@ -8,11 +8,12 @@ import {
 } from '@expo-google-fonts/inter'
 
 import { Home } from './src/screens/Home';
+import { Loading } from './src/components/Loading';
 import { Background } from './src/components/Background';
-import { useFonts } from '@expo-google-fonts/inter/useFonts';
+
 
 export default function App() {
-  const [fontsLoade] = useFonts({
+  const [fontsLoaded] = useFonts({
   Inter_400Regular,
   Inter_600SemiBold,
   Inter_700Bold,
@@ -30,7 +31,7 @@ export default function App() {
 
       
       />
-      { fontsLoaded ? <Home /> : }
+      {fontsLoaded ? <Home /> : <Loading/> }
     </Background>
 
   );
