@@ -1,4 +1,4 @@
-import { TouchableOpacity, ImageBackground } from "react-native";
+import { TouchableOpacity, TouchableOpacityProps, ImageBackground } from "react-native";
 
 import { styles } from './styles';
 
@@ -18,7 +18,7 @@ export function GameCard({ data }: Props) {
         <TouchableOpacity style ={styles.container}>
             <ImageBackground
             style={styles.cover}
-            source={}
+            source={data.cover}
             />
 
         </TouchableOpacity>
